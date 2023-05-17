@@ -7,4 +7,4 @@ import { PetsList } from './components/pet.list';
 new Header('#app', 'Gaticos y Monetes');
 new Main('#app');
 new PetsList('main');
-new Footer('#app', 'Ay los Gaticos');
+new Footer('#app', '¡Ay los Gaticos!');

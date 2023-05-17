@@ -35,13 +35,16 @@ export class PetsList extends Component {
     const list = this.pets
       .map(
         (item) => `
+        <div>
           <li>
+            <img src="/${item.name}.jpeg" alt="${item.name} ${item.breed}" >
             <span>${item.isAdopted ? 'checked' : ''}</span>
             <span>${item.id}</span>
             <span>${item.name}</span>
             <span>${item.breed}</span>
             <span>${item.owner}</span>
-          </li>`
+          </li>
+          </div>`
       )
       .join('');
 

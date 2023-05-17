@@ -1,13 +1,14 @@
 * {
-  background-color: powderblue;
+  background-color: #ffffff;
 }
 
 header {
   margin: 0%;
-  background-color: powderblue;
+  margin-bottom: 4rem;
 }
 
 h1 {
-  color: #dca2bf;
+  color: #68664e;
   text-align: center;
+  font-family: 'Nunito', sans-serif;
 }

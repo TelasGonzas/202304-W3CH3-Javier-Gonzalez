@@ -1,8 +1,6 @@
 import './main.css';
 import { Component } from './component';
 
-import { PetsList } from './pet.list';
-
 export class Main extends Component {
   constructor(selector: string) {
     super(selector);
@@ -14,7 +12,7 @@ export class Main extends Component {
   createTemplate() {
     return `
     <main>
-      <h2>Gatetes:</h2>
+
     </main>
     `;
   }
