@@ -44,7 +44,9 @@ export class PetsList extends Component {
             <span>${item.breed}</span>
             <span class= "button-span">${
               item.owner
-            }<i class="button" role="button" data-id=${item.id}>✖️</i></span>
+            }<i class="button" role="button" data-id=${
+          item.id
+        }>Borrar</i></span>
           </li>
           </div>`
       )
