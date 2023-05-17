@@ -31,3 +31,13 @@ span {
   font-family: 'Nunito', sans-serif;
   padding-top: 5px;
 }
+
+.button-span {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button {
+  width: 25px;
+  height: 30px;
+}
