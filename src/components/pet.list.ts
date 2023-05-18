@@ -11,7 +11,7 @@ export class PetsList extends Component {
     this.render();
   }
 
-  render(): void {
+  render(): any {
     super.cleanHtml(this.selector);
     this.template = this.createTemplate();
     super.render();
@@ -28,11 +28,6 @@ export class PetsList extends Component {
 
     this.render();
   }
-
-  /* Sound() {
-    const snd = new Audio('https://pixabay.com/sound-effects/cat-meow-6226/');
-    snd.play();
-  } */
 
   createTemplate() {
     const list = this.pets
