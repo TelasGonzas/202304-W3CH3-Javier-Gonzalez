@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { getMockPets } from '../data/mock.pets';
 import { Pets } from '../models/pets';
 import { Component } from './component';
@@ -12,24 +11,28 @@ export class PetsList extends Component {
     this.render();
   }
 
-  render() {
+  render(): void {
     super.cleanHtml(this.selector);
     this.template = this.createTemplate();
-    const element = super.render();
-    document
+    super.render();
+    this.element
       .querySelectorAll('.button')
       .forEach((item) =>
         item.addEventListener('click', this.handleDelete.bind(this))
       );
-    return element;
   }
 
-  handleDelete(event: Event) {
+  handleDelete(event: Event): void {
     const element = event.target as HTMLSpanElement;
     this.pets = this.pets.filter((item) => item.id !== element.dataset.id);
-    console.log(this.pets);
+
     this.render();
   }
+
+  /* Sound() {
+    const snd = new Audio('https://pixabay.com/sound-effects/cat-meow-6226/');
+    snd.play();
+  } */
 
   createTemplate() {
     const list = this.pets
@@ -42,11 +45,11 @@ export class PetsList extends Component {
             <span>${item.id}</span>
             <span>${item.name}</span>
             <span>${item.breed}</span>
-            <span class= "button-span">${
-              item.owner
-            }<i class="button" role="button" data-id=${
-          item.id
-        }>Borrar</i></span>
+            <span class= "button-span">${item.owner}
+            
+            <i onclick="document.getElementById('sound').play();" class="button" role="button" data-id=${
+              item.id
+            }>Borrar</i></span>
           </li>
           </div>`
       )
